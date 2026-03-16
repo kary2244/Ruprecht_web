@@ -1,0 +1,233 @@
+/* Info Pages Styles */
+.info-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 12% 10%, rgba(212, 165, 116, 0.14), transparent 48%),
+    radial-gradient(circle at 88% 0%, rgba(44, 24, 16, 0.12), transparent 45%),
+    linear-gradient(180deg, #fbf8f4 0%, #ffffff 45%, #fbf7f3 100%);
+  padding-bottom: 3.5rem;
+}
+
+.info-hero {
+  position: relative;
+  background: linear-gradient(135deg, #3d2f28, #2c1810);
+  color: var(--white);
+  text-align: center;
+  padding: 4.5rem 2rem 4rem;
+}
+
+.info-eyebrow {
+  position: relative;
+  z-index: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+  font-size: 0.75rem;
+  color: #d4a574;
+  margin-bottom: 0.75rem;
+}
+
+.info-title {
+  position: relative;
+  z-index: 1;
+  font-size: 3rem;
+  letter-spacing: 0.12em;
+  margin: 0 0 0.75rem;
+  font-weight: 400;
+  text-shadow: none;
+}
+
+.info-subtitle {
+  position: relative;
+  z-index: 1;
+  max-width: 640px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  color: #d4a574;
+  line-height: 1.7;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+.info-container {
+  max-width: 1200px;
+  margin: 3rem auto 0;
+  padding: 0 2rem;
+  display: grid;
+  gap: 3rem;
+  position: relative;
+}
+
+.info-section,
+.info-card,
+.info-faq-item {
+  position: relative;
+  background: linear-gradient(180deg, #ffffff 0%, #faf8f6 100%);
+  border: 1px solid rgba(212, 165, 116, 0.22);
+  border-radius: 18px;
+  box-shadow:
+    0 16px 35px rgba(44, 24, 16, 0.08),
+    0 1px 0 rgba(255, 255, 255, 0.7) inset;
+  padding: 2.5rem 2.75rem;
+  overflow: hidden;
+}
+
+.info-section::before,
+.info-card::before,
+.info-faq-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 2.25rem;
+  right: 2.25rem;
+  height: 3px;
+  background: linear-gradient(90deg, rgba(212, 165, 116, 0.95), rgba(212, 165, 116, 0.1));
+  border-radius: 999px;
+}
+
+.info-section h2,
+.info-card h2,
+.info-card h3,
+.info-faq-item h3 {
+  color: #2c1810;
+  margin: 0 0 0.85rem;
+  font-size: 1.55rem;
+  letter-spacing: 0.03em;
+}
+
+.info-section p,
+.info-card p,
+.info-faq-item p {
+  color: #6b5b4f;
+  line-height: 1.75;
+  margin: 0;
+  font-size: 1.02rem;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2.5rem;
+  align-items: stretch;
+}
+
+.info-list {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.info-list li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.75rem;
+  color: #6b5b4f;
+  line-height: 1.6;
+}
+
+.info-list li::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  box-shadow: 0 0 0 4px rgba(212, 165, 116, 0.18);
+  margin-top: 0.35rem;
+}
+
+.info-list strong {
+  color: #2c1810;
+}
+
+.info-highlight {
+  background: rgba(212, 165, 116, 0.12);
+  border: 1px solid rgba(212, 165, 116, 0.3);
+  padding: 1.1rem 1.4rem;
+  border-radius: 12px;
+  color: #6b5b4f;
+}
+
+@keyframes info-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.info-container > * {
+  animation: info-fade-up 0.65s ease both;
+}
+
+.info-container > *:nth-child(1) {
+  animation-delay: 0.05s;
+}
+
+.info-container > *:nth-child(2) {
+  animation-delay: 0.12s;
+}
+
+.info-container > *:nth-child(3) {
+  animation-delay: 0.19s;
+}
+
+.info-container > *:nth-child(4) {
+  animation-delay: 0.26s;
+}
+
+.info-container > *:nth-child(5) {
+  animation-delay: 0.33s;
+}
+
+.info-container > *:nth-child(6) {
+  animation-delay: 0.4s;
+}
+
+@media (max-width: 1024px) {
+  .info-container {
+    padding: 0 1.5rem;
+  }
+
+  .info-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .info-hero {
+    padding: 3.5rem 1.5rem 3rem;
+  }
+
+  .info-title {
+    font-size: 2.1rem;
+    letter-spacing: 0.08em;
+  }
+
+  .info-container {
+    margin-top: 2.5rem;
+    padding: 0 1rem;
+  }
+
+  .info-section,
+  .info-card,
+  .info-faq-item {
+    padding: 1.6rem;
+  }
+
+  .info-section::before,
+  .info-card::before,
+  .info-faq-item::before {
+    left: 1.5rem;
+    right: 1.5rem;
+  }
+}
