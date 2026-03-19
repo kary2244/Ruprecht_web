@@ -47,8 +47,7 @@ const Footer = () => {
             </li>
           </ul>
           <div className="footer-social">
-            <a href="#" aria-label="Instagram"><i className="pi pi-instagram"></i></a>
-            <a href="#" aria-label="Facebook"><i className="pi pi-facebook"></i></a>
+            <a href="https://www.instagram.com/ruprecht2023?igsh=MTdwc3owcTRtZnllOA==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i className="pi pi-instagram"></i></a>
           </div>
         </div>
       </div>
