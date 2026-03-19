@@ -29,7 +29,11 @@ const Contact = () => {
     setStatus({ type: '', message: '' })
 
     try {
-      const response = await axios.post(`${API_BASE_URL}/contact`, formData)
+      const response = await axios.post(
+        `${API_BASE_URL}/contact`,
+        formData,
+        { withCredentials: false } // No enviar cookies ni sesión
+      )
       setStatus({ 
         type: 'success', 
         message: 'Mensaje enviado exitosamente. Te responderemos pronto.' 
